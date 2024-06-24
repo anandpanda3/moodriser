@@ -17,18 +17,6 @@ MoodRiser is a web application designed to help people feel better by providing 
 - **API Integration**: Utilizes the Spotify API for playlist recommendations, OpenAI's ChatGPT API for generating personalized responses, and the official Google Books API for book suggestions.
 - **Data Visualization**: Implemented using Chart.js library for dynamic mood tracking visualization.
 
-## Deployment
-
-- **Website**: MoodRiser is accessible online at [www.moodriser.com](www.moodriser.com).
-- **Backend**: Hosted on Render platform, ensuring reliable and scalable backend services.
-
-## Meet the Team
-
-- **André Hortelão**
-- **Vicente Figueiredo**
-- **Marco Martins**
-- **Daniel Carvalho**
-
 ## How to Use
 
 1. Visit [www.moodriser.com](www.moodriser.com) in your web browser.
