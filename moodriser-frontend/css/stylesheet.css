@@ -1,0 +1,294 @@
+body {
+    background: linear-gradient(45deg, #83A8A6, #497A78, #C0CDC4, #83A8A6);
+    font-family: "IBM Plex Mono", monospace;
+  font-weight: 100;
+  font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-size: 1000% 1000%;
+    animation: gradientRotate 10s linear infinite;
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100svw;
+    height: 100svh;
+}
+
+#searchbar{
+ width: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    outline: 0;
+}
+
+#anchors {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.padding {
+    padding: 100px;
+}
+
+.next {
+    margin: 5px;
+    width: 300px;
+}
+
+.truefalse {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    top: 40%;
+}
+
+.space {
+    padding-top: 50px;
+}
+
+.centered {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dropdown {
+    padding: 30px;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.sized {
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.moodGraph {
+    background-color: aliceblue;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.mood {
+   
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.moodGraph {
+    width: 80%;
+}
+
+#row {
+    display: grid;
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    width: 100%; /* Change to percentage for responsiveness */
+    grid-template-columns: repeat(5, minmax(0, 1fr)); /* Initially 4 columns */
+}
+
+/* Adjust the number of columns based on viewport width */
+@media screen and (max-width: 1200px) {
+    #row {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #row {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.item:hover img {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+.item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.746);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth transition */
+    transform: translateY(100%); /* Initially hidden below the image */
+}
+
+.item:hover .overlay {
+    opacity: 1;
+    transform: translateY(0); /* Slide up to reveal on hover */
+    transition-delay: 0.2s; /* Delay transition to start after image animation */
+}
+
+.item .overlay-content {
+    text-align: center;
+    transition: opacity 0.3s ease; /* Smooth transition for content */
+}
+
+.item:hover .overlay-content {
+    opacity: 1; /* Fade in the content on hover */
+}
+
+#pii {
+    text-align: center;
+    padding: 50px;
+}
+
+.coverAll {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #83A8A6, #497A78, #C0CDC4, #83A8A6);
+    background-size: 1000% 1000%;
+    animation: gradientRotate 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+
+.loading {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #ff0000, #0000ff, #00ff00, #eaff00);
+    background-size: 400% 400%; /* Adjust size if needed */
+    animation: gradientRotate 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+@keyframes gradientRotate {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+#spotifyPlayer {
+    margin-top: 50px;
+}
+
+.form-range {
+    width: 50%;
+}
+
+.modal {
+    margin-top: 100px;
+    height: 80vh;
+}
+
+
+.modal-content {
+    background-color: #1c1c1f00;
+}
+
+.modal-title {
+    color:aliceblue;
+}
+
+.space-top-bar {
+    top: -7px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 40px;
+}
+
+
+.fixed-top:hover, .fixed-top-home:hover {
+    height: 47px;
+    background-color: #1c1c1c;
+    border-color: #1c1c1c;
+}
+
+.fixed-top-home {
+  
+   top: -7px;
+    width: 200px;
+   
+    height: 40px;
+    transition: all ease 0.3s;
+    background-color: #282828;
+    border-color: #282828;
+}
+
+.centerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+#moodRange {
+    padding: 5px;
+}
+
+.buttonClear {
+    transition: all ease 0.3s;
+    background-color: #282828;
+    border-color: #282828;
+}
+
+.buttonClear:hover {
+    background-color: #1c1c1c;
+    border-color: #1c1c1c;
+}
+
+#rangeValue {
+    position: relative;
+    top: 15px;
+    right: 4px;
+}
+
+.quote {
+    padding: 50px 200px;
+}
+
+.letter {
+    font-family: "Bad Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+
+}

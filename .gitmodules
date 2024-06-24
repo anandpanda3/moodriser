@@ -1,0 +1,3 @@
+[submodule "moodriser-backend"]
+	path = moodriser-backend
+	url = https://github.com/sawsent/moodriser-backend.git
